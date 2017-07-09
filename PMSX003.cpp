@@ -186,7 +186,7 @@ boolean PMSX003::pmsx003SendRequest(uint8_t * request){
 
     if(currentMillis - start >= timeout_interval) {
       // exit with false if you get a timeout
-      Serial.println("TIMEOUT #1");
+      // Serial.println("TIMEOUT #1");
       return false;
     }
   }
@@ -205,7 +205,7 @@ boolean PMSX003::pmsx003ConsumeResponse(uint8_t * response){
   while(bytes_received < 32){
     unsigned long currentMillis = millis();
     if(currentMillis - start >= timeout_interval) {
-      Serial.println("TIMEOUT #2");
+      // Serial.println("TIMEOUT #2");
       return false;
     }
 
