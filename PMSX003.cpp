@@ -242,7 +242,7 @@ boolean PMSX003::pmsx003ValidResponse(uint8_t * response){
   }
 
   if(pmsx003GetValue(response, 14) != sum){
-    Serial.println("CHECKSUM ERROR!");
+    // Serial.println("CHECKSUM ERROR!");
     return false;
   }
 
