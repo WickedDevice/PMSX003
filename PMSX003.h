@@ -27,10 +27,11 @@ private:
   uint8_t read();
   void write(uint8_t * value, int size);
   void write(uint8_t value);
-
   boolean pmsx003ValidResponse(uint8_t * response);
+  boolean pmsx003ValidResponse(uint8_t * response, uint8_t length);
   uint16_t pmsx003GetValue(uint8_t * response, uint8_t field_index);
   boolean pmsx003ConsumeResponse(uint8_t * response);
+  boolean pmsx003ConsumeResponse(uint8_t * response, uint8_t length);
   boolean pmsx003SendRequest(uint8_t * request);
   void clearPMSX003SerialInput(void);
 };
