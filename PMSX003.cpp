@@ -12,6 +12,16 @@ PMSX003::PMSX003(SoftwareSerial * swserial){
   this->hwserial = NULL;
 }
 
+void PMSX003::setSerial(HardwareSerial * serial) {
+  this->swserial = NULL;
+  this->hwserial = serial;
+}
+
+void PMSX003::setSerial(SoftwareSerial * serial) {
+  this->swserial = serial;
+  this->hwserial = NULL;
+}
+
 boolean PMSX003::begin(void){
   const uint8_t init_message[] = { 0x42, 0x4d, 0xe1, 0x00, 0x00, 0x01, 0x70 }; // precompute checksum
 

@@ -11,6 +11,9 @@ public:
   PMSX003(HardwareSerial * serial);
   PMSX003(SoftwareSerial * swserial);
 
+  void setSerial(HardwareSerial *serial);
+  void setSerial(SoftwareSerial *serial);
+
   boolean begin(void);                                           // puts sensor into passive mode
   boolean getSample(float * pm1p0, float * pm2p5, float * pm10); // returns only data fields 4, 5, and 6
   boolean getFields(uint16_t * buf);                             // returns 13 data field values into buf
